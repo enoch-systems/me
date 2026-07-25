@@ -22,4 +22,19 @@ export class ProfileComponent {
       document.body.style.overflow = '';
     }
   }
+
+  closeMenuAndScroll(sectionId?: string) {
+    this.menuOpen = false;
+    document.body.style.overflow = '';
+    if (sectionId) {
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
 }
