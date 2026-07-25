@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { HeroSectionComponent } from '../../components/hero-section/hero-section.component';
 import { FocusSectionComponent } from '../../components/focus-section/focus-section.component';
 import { SelectedWorkComponent } from '../../components/selected-work/selected-work.component';
@@ -7,7 +8,18 @@ import { FooterSectionComponent } from '../../components/footer-section/footer-s
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [HeroSectionComponent, FocusSectionComponent, SelectedWorkComponent, FooterSectionComponent],
+  imports: [CommonModule, HeroSectionComponent, FocusSectionComponent, SelectedWorkComponent, FooterSectionComponent],
   templateUrl: './profile.component.html'
 })
-export class ProfileComponent {}
+export class ProfileComponent {
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+    if (this.menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+}

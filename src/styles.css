@@ -1,3 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.menu-panel-enter {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.menu-panel-exit {
+  animation: slideOutRight 0.3s ease-in;
+}
