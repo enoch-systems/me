@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroSectionComponent } from '../../components/hero-section/hero-section.component';
 import { FocusSectionComponent } from '../../components/focus-section/focus-section.component';
@@ -11,8 +11,12 @@ import { FooterSectionComponent } from '../../components/footer-section/footer-s
   imports: [CommonModule, HeroSectionComponent, FocusSectionComponent, SelectedWorkComponent, FooterSectionComponent],
   templateUrl: './profile.component.html'
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
   menuOpen = false;
+
+  ngOnInit() {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
