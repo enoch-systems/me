@@ -7,7 +7,6 @@ import { Component, OnInit, AfterViewInit, ElementRef, HostListener } from '@ang
 })
 export class FocusSectionComponent implements AfterViewInit {
   private observer: IntersectionObserver | null = null;
-  hasAnimated = false;
 
   constructor(private elementRef: ElementRef) {}
 
@@ -19,9 +18,10 @@ export class FocusSectionComponent implements AfterViewInit {
     this.observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !this.hasAnimated) {
-            this.hasAnimated = true;
+          if (entry.isIntersecting) {
             this.animateElements();
+          } else {
+            this.resetAnimations();
           }
         });
       },
@@ -41,11 +41,26 @@ export class FocusSectionComponent implements AfterViewInit {
     const description = this.elementRef.nativeElement.querySelector('p');
     
     if (heading) {
+      heading.classList.remove('animate-slide-from-left');
       heading.classList.add('animate-slide-from-left');
     }
     
     if (description) {
+      description.classList.remove('animate-slide-from-right');
       description.classList.add('animate-slide-from-right');
+    }
+  }
+
+  private resetAnimations() {
+    const heading = this.elementRef.nativeElement.querySelector('h3');
+    const description = this.elementRef.nativeElement.querySelector('p');
+    
+    if (heading) {
+      heading.classList.remove('animate-slide-from-left');
+    }
+    
+    if (description) {
+      description.classList.remove('animate-slide-from-right');
     }
   }
 
