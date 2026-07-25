@@ -1,13 +1,13 @@
 <div class="min-h-screen w-full relative bg-black">
   <!-- Toggle Button (Hamburger / Close) -->
-  <button type="button" class="fixed top-4 right-4 z-[9999] p-4 bg-black rounded-lg border border-gray-800 hover:border-gray-600 transition-colors cursor-pointer slide-from-left" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent; animation-delay: 1.1s;" (click)="toggleMenu()">
-    <img *ngIf="!menuOpen" src="https://res.cloudinary.com/djdbcoyot/image/upload/v1785003333/a7vzspuu4lhvscozfcel.png" alt="Menu" class="w-6 h-6 pointer-events-none" style="filter: invert(1);" />
-    <img *ngIf="menuOpen" src="https://res.cloudinary.com/djdbcoyot/image/upload/v1785004649/plhgwxaawxrhvvvjvc7m.png" alt="Close" class="w-6 h-6 pointer-events-none" style="filter: invert(1);" />
+  <button type="button" class="fixed top-4 right-4 sm:top-6 sm:right-6 z-[10000] p-3 sm:p-4 bg-black rounded-lg border-2 border-gray-800 shadow-lg hover:bg-gray-900 transition-colors cursor-pointer" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent; padding-top: max(0.75rem, env(safe-area-inset-top)); padding-right: max(0.75rem, env(safe-area-inset-right));" (click)="toggleMenu()">
+    <img *ngIf="!menuOpen" src="https://res.cloudinary.com/djdbcoyot/image/upload/v1785003333/a7vzspuu4lhvscozfcel.png" alt="Menu" class="w-6 h-6 sm:w-6 sm:h-6 pointer-events-none" style="filter: invert(1);" />
+    <img *ngIf="menuOpen" src="https://res.cloudinary.com/djdbcoyot/image/upload/v1785004649/plhgwxaawxrhvvvjvc7m.png" alt="Close" class="w-6 h-6 sm:w-6 sm:h-6 pointer-events-none" style="filter: invert(1);" />
   </button>
   
   <!-- Menu Overlay (Half-width menu with text labels) -->
-  <div class="fixed inset-0 z-40 transition-opacity duration-500 ease-in-out" [class.opacity-100]="menuOpen" [class.opacity-0]="!menuOpen" [class.pointer-events-auto]="menuOpen" [class.pointer-events-none]="!menuOpen" style="backdrop-filter: blur(12px);" (click)="toggleMenu()">
-    <div class="flex flex-col justify-center h-full w-1/2 max-w-md ml-auto px-8 md:px-16 bg-black transition-transform duration-500 ease-in-out" [class.translate-x-0]="menuOpen" [class.translate-x-full]="!menuOpen" (click)="$event.stopPropagation()">
+  <div class="fixed inset-0 z-40 transition-opacity duration-700 ease-in-out" [class.opacity-100]="menuOpen" [class.opacity-0]="!menuOpen" [class.pointer-events-auto]="menuOpen" [class.pointer-events-none]="!menuOpen" style="backdrop-filter: blur(12px);" (click)="toggleMenu()">
+    <div class="flex flex-col justify-center h-full w-1/2 max-w-md ml-auto px-8 md:px-16 bg-black transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" [class.translate-x-0]="menuOpen" [class.translate-x-full]="!menuOpen" [class.opacity-100]="menuOpen" [class.opacity-0]="!menuOpen" (click)="$event.stopPropagation()">
       <!-- Explore Section -->
       <div class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-2">Explore</div>
       <a href="#" class="flex items-center gap-4 py-2.5 text-white hover:text-gray-300 transition-colors group" (click)="$event.preventDefault(); closeMenuAndScroll()">
