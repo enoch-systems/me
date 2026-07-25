@@ -1,90 +1,117 @@
-<div class="h-screen w-full bg-black relative overflow-hidden">
-  <!-- Full Screen Background Image -->
-  <img 
-    src="https://res.cloudinary.com/djdbcoyot/image/upload/v1780951883/hukdooivxlvjfk7pcuvq.png" 
-    alt="Background" 
-    class="w-full h-full object-cover"
-  />
-
-  <!-- Dark Overlay -->
-  <div class="absolute inset-0 bg-black/30"></div>
-
-  <!-- Content -->
-  <div class="relative z-10 h-full flex flex-col justify-between p-8">
-    <!-- Top Section - Time -->
-    <div class="text-white">
-      <h1 class="text-5xl font-light">17:42</h1>
+<div class="min-h-screen w-full relative bg-black">
+  <!-- Background Image - Black and White, full screen hero -->
+  <div class="relative pt-10 h-screen w-full">
+    <img 
+      src="https://res.cloudinary.com/djdbcoyot/image/upload/v1780951883/hukdooivxlvjfk7pcuvq.png" 
+      alt="Background" 
+      class="w-full h-full object-cover grayscale opacity-80"
+    />
+    
+    <!-- Name and Title Overlay on Image -->
+    <div class="absolute inset-0 flex items-center justify-center z-10">
+      <div class="text-center px-4 pt-90 md:px-8 max-w-4xl">
+        <h1 class="text-8xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white uppercase leading-none text-center" style="text-shadow: 0 4px 12px rgb(7, 0, 0); font-family: 'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans', 'DejaVu Sans', sans-serif;">
+          <span class="block">EᑎOᑕᕼ</span>
+          <span class="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl block mt-2 sm:-mt-3 md:-mt-4 lg:-mt-5">ᑕᕼᑌKᗯᑌᗪI</span>
+        </h1>
+        
+        <!-- Centered Horizontal Line -->
+        <div class="w-24 sm:w-32 md:w-40 h-px mx-auto my-6 md:my-8" style="background: linear-gradient(to right, transparent 0%, #4B5563 20%, #4B5563 80%, transparent 100%);"></div>
+        
+        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 font-light drop-shadow-xl">
+          Software Engineer / Scalable Systems
+        </p>
+      </div>
     </div>
+  </div>
 
-    <!-- Middle Section - Empty for image focus -->
-    <div class="flex-1"></div>
-
-    <!-- Bottom Section -->
-    <div class="space-y-6">
-      <!-- App Icons Row -->
-      <div class="flex items-center justify-center gap-6">
-        <!-- Facebook -->
-        <button class="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center hover:scale-110 transition-transform" aria-label="Facebook">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"/>
-          </svg>
-        </button>
-
-        <!-- Instagram -->
-        <button class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 flex items-center justify-center hover:scale-110 transition-transform" aria-label="Instagram">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="20" height="20" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="18" cy="6" r="1.5" fill="white"/>
-          </svg>
-        </button>
-
-        <!-- Google Play -->
-        <button class="w-14 h-14 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform" aria-label="Google Play">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.5 12.92 20.16 13.19L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z"/>
-          </svg>
-        </button>
-
-        <!-- SoundCloud -->
-        <button class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center hover:scale-110 transition-transform" aria-label="SoundCloud">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 18V16H3V18H1ZM5 18V16H7V18H5ZM9 18V16H11V18H9ZM13 18V16H15V18H13ZM17 18V16H19V18H17ZM21 18V16H23V18H21ZM2 14V12H4V14H2ZM6 14V12H8V14H6ZM10 14V12H12V14H10ZM14 14V12H16V14H14ZM18 14V12H20V14H18ZM22 14V12H24V14H22ZM3 10V8H5V10H3ZM7 10V8H9V10H7ZM11 10V8H13V10H11ZM15 10V8H17V10H15ZM19 10V8H21V10H19ZM23 10V8H25V10H23ZM4 6V4H6V6H4ZM8 6V4H10V6H8ZM12 6V4H14V6H12ZM16 6V4H18V6H16ZM20 6V4H22V6H20ZM24 6V4H26V6H24Z"/>
-          </svg>
-        </button>
-
-        <!-- Music -->
-        <button class="w-14 h-14 rounded-full bg-orange-400 flex items-center justify-center hover:scale-110 transition-transform" aria-label="Music">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z"/>
-          </svg>
-        </button>
+  <!-- Bio Section Below Image -->
+  <div class="relative -mt-15 z-10 bg-black">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center" style="font-family: 'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans', 'DejaVu Sans', sans-serif;">BIO</h2>
+      <div class="w-full h-px mb-8" style="background: linear-gradient(to right, transparent 0%, #4B5563 50%, #4B5563 40%, transparent 100%);"></div>
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-12 text-center">
+          Software engineer building scalable systems across backend, cloud, AI, and product engineering.
+        </p>
       </div>
-
-      <!-- Date and Weather Info -->
-      <div class="text-center text-white space-y-1">
-        <p class="text-lg font-medium">MARTES, NOVIEMBRE 28, 2017</p>
-        <p class="text-xs text-gray-300">TODAY'S PARCIALMENTE CUBIERTO IN CARTAGENA 26°C</p>
-        <p class="text-xs text-gray-300">BATTERY DESCARGANDO AT 41%</p>
+      
+      <!-- Focus Section -->
+      <div class="max-w-4xl mx-auto mt-16">
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center" style="font-family: 'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans', 'DejaVu Sans', sans-serif;">FOCUS</h3>
+        <div class="w-full h-px mb-8" style="background: linear-gradient(to right, transparent 0%, #4B5563 20%, #4B5563 80%, transparent 100%);"></div>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-center">
+          Engineering at the intersection of backend systems, cloud infrastructure, AI, and product development. Focused on scalable architecture, reliable platforms, and technology that solves complex problems.
+        </p>
+        
+        <div class="bg-black rounded-xl p-6 md:p-8 border border-gray-800 max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-lg font-semibold text-white mb-2">Software Systems</h4>
+              <div class="w-full h-px mb-3" style="background: linear-gradient(to right, #4B5563 0%, #4B5563 60%, transparent 100%);"></div>
+              <p class="text-gray-400 text-sm leading-relaxed">Scalable applications through backend architecture, APIs, data systems, and business logic.</p>
+            </div>
+            
+            <div>
+              <h4 class="text-lg font-semibold text-white mb-2">Cloud & Infrastructure</h4>
+              <div class="w-full h-px mb-3" style="background: linear-gradient(to right, #4B5563 0%, #4B5563 60%, transparent 100%);"></div>
+              <p class="text-gray-400 text-sm leading-relaxed">Reliable systems through deployment, scalability, automation, and operational excellence.</p>
+            </div>
+            
+            <div>
+              <h4 class="text-lg font-semibold text-white mb-2">AI Engineering</h4>
+              <div class="w-full h-px mb-3" style="background: linear-gradient(to right, #4B5563 0%, #4B5563 60%, transparent 100%);"></div>
+              <p class="text-gray-400 text-sm leading-relaxed">Intelligent applications through AI systems, automation, and data-driven solutions.</p>
+            </div>
+            
+            <div>
+              <h4 class="text-lg font-semibold text-white mb-2">Product Engineering</h4>
+              <div class="w-full h-px mb-3" style="background: linear-gradient(to right, #4B5563 0%, #4B5563 60%, transparent 100%);"></div>
+              <p class="text-gray-400 text-sm leading-relaxed">End-to-end digital products connecting user experience, engineering, and business requirements.</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- Navigation Buttons -->
-      <div class="flex items-center justify-around pt-4">
-        <button class="text-white hover:text-gray-300 transition-colors" aria-label="Back">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"/>
-          </svg>
-        </button>
-        <button class="text-white hover:text-gray-300 transition-colors" aria-label="Home">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="8"/>
-          </svg>
-        </button>
-        <button class="text-white hover:text-gray-300 transition-colors" aria-label="Recent Apps">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <rect x="4" y="4" width="16" height="16" rx="2"/>
-          </svg>
-        </button>
+      
+      <!-- Selected Work Section -->
+      <div class="max-w-4xl mx-auto mt-16">
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center" style="font-family: 'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans', 'DejaVu Sans', sans-serif;">SELECETED WORK</h3>
+        <div class="w-full h-px mb-8" style="background: linear-gradient(to right, transparent 0%, #4B5563 20%, #4B5563 80%, transparent 100%);"></div>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-12 text-center">
+          A collection of software systems and products exploring backend architecture, cloud infrastructure, AI integration, and product engineering. Each project focuses on solving real-world problems through scalable design and reliable technology.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="bg-black rounded-xl p-6 md:p-8 border border-gray-800">
+            <h4 class="text-lg font-semibold text-white mb-2">Digital Wallet Platform</h4>
+            <div class="w-full h-px mb-3" style="background: linear-gradient(to right, #4B5563 0%, #4B5563 60%, transparent 100%);"></div>
+            <p class="text-gray-500 text-sm mb-3">Financial Systems</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">A transaction platform focused on secure money movement, account management, and reliable financial workflows.</p>
+            <p class="text-white text-sm font-semibold mb-2">Focus</p>
+            <ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc list-inside">
+              <li>Transaction architecture</li>
+              <li>Data consistency</li>
+              <li>Authentication systems</li>
+              <li>Backend services</li>
+            </ul>
+            <a href="#" class="inline-block px-4 py-2 bg-white text-black text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors">View Case Study &rarr;</a>
+          </div>
+          
+          <div class="bg-black rounded-xl p-6 md:p-8 border border-gray-800">
+            <h4 class="text-lg font-semibold text-white mb-2">Cloud Infrastructure System</h4>
+            <div class="w-full h-px mb-3" style="background: linear-gradient(to right, #4B5563 0%, #4B5563 60%, transparent 100%);"></div>
+            <p class="text-gray-500 text-sm mb-3">Infrastructure & DevOps</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">A scalable deployment system with auto-scaling capabilities, monitoring, and multi-region support.</p>
+            <p class="text-white text-sm font-semibold mb-2">Focus</p>
+            <ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc list-inside">
+              <li>Deployment automation</li>
+              <li>Scalability patterns</li>
+              <li>Monitoring & observability</li>
+              <li>Infrastructure as code</li>
+            </ul>
+            <a href="#" class="inline-block px-4 py-2 bg-white text-black text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors">View Case Study &rarr;</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
