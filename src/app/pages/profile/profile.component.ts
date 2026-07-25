@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroSectionComponent } from '../../components/hero-section/hero-section.component';
 import { FocusSectionComponent } from '../../components/focus-section/focus-section.component';
@@ -15,9 +15,18 @@ export class ProfileComponent implements AfterViewInit {
   menuOpen = false;
 
   ngAfterViewInit() {
+    this.scrollToTop();
+  }
+
+  @HostListener('window:load')
+  onWindowLoad() {
+    this.scrollToTop();
+  }
+
+  private scrollToTop() {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'instant' });
-    }, 0);
+    }, 100);
   }
 
   toggleMenu() {
