@@ -20,23 +20,19 @@
   }
 }
 
-h3 {
+#selected-work h3.slide-from-left {
   opacity: 0;
 }
 
-p {
+#selected-work p.slide-from-right {
   opacity: 0;
 }
 
-h4 {
-  opacity: 0;
-}
-
-.animate-slide-from-left {
+#selected-work .animate-slide-from-left {
   animation: slideFromLeft 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.animate-slide-from-right {
+#selected-work .animate-slide-from-right {
   animation: slideFromRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: 0.3s;
 }
