@@ -36,3 +36,14 @@
   animation: slideFromRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: 0.3s;
 }
+
+#selected-work .project-card {
+  border: none;
+  box-shadow: 0 0 40px rgba(156, 163, 175, 0.15), 0 12px 32px rgba(60, 66, 78, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#selected-work .project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 55px rgba(156, 163, 175, 0.25), 0 16px 42px rgba(60, 66, 78, 0.2);
+}
