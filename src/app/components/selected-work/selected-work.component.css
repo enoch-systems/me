@@ -39,11 +39,11 @@
 
 #selected-work .project-card {
   border: none;
-  box-shadow: 0 0 40px rgba(156, 163, 175, 0.15), 0 12px 32px rgba(60, 66, 78, 0.2);
+  box-shadow: 0 0 40px rgba(156, 163, 175, 0.15), 0 12px 32px rgba(23, 26, 33, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #selected-work .project-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 55px rgba(156, 163, 175, 0.25), 0 16px 42px rgba(60, 66, 78, 0.2);
+  box-shadow: 0 0 55px rgba(156, 163, 175, 0.25), 0 16px 42px rgba(23, 26, 33, 0.2);
 }
